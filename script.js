@@ -1,5 +1,4 @@
 function showGallery() {
-
     var audio = new Audio("birthday.mp4");
     audio.play();
 
