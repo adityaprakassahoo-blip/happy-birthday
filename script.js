@@ -4,7 +4,9 @@ function showGallery() {
 
     // Play music
     const audio = document.getElementById("birthdayAudio");
-    audio.play();
+audio.load();
+audio.currentTime = 0;
+audio.play().catch(e => console.log(e));
 
     const images = [
         "./images/WhatsApp Image 2026-07-13 at 4.29.36 PM.jpeg",
