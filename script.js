@@ -1,6 +1,14 @@
+let started = false;
+
 function showGallery() {
 
+    if (started) return;
+    started = true;
+
     document.getElementById("gallery").style.display = "block";
+
+    // Play birthday audio
+    document.getElementById("birthdayAudio").play();
 
     const images = [
         "./images/WhatsApp Image 2026-07-13 at 4.29.36 PM.jpeg",
