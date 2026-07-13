@@ -8,7 +8,6 @@ function showGallery() {
 
     const images = [
         "./images/WhatsApp Image 2026-07-13 at 4.29.36 PM.jpeg",
-        "./images/WhatsApp Image 2026-07-13 at 4.29.37 PM.jpeg",
         "./images/WhatsApp Image 2026-07-13 at 4.29.38 PM.jpeg",
         "./images/WhatsApp Image 2026-07-13 at 4.29.38 PM (1).jpeg",
         "./images/WhatsApp Image 2026-07-13 at 4.29.38 PM (2).jpeg",
