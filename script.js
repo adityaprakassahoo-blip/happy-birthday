@@ -1,14 +1,10 @@
-let started = false;
-
 function showGallery() {
-
-    if (started) return;
-    started = true;
 
     document.getElementById("gallery").style.display = "block";
 
-    // Play birthday audio
-    document.getElementById("birthdayAudio").play();
+    // Play music
+    const audio = document.getElementById("birthdayAudio");
+    audio.play();
 
     const images = [
         "./images/WhatsApp Image 2026-07-13 at 4.29.36 PM.jpeg",
@@ -28,20 +24,27 @@ function showGallery() {
         "./images/WhatsApp Image 2026-07-13 at 4.44.15 PM.jpeg",
         "./images/WhatsApp Image 2026-07-13 at 4.44.16 PM.jpeg",
         "./images/WhatsApp Image 2026-07-13 at 4.44.17 PM.jpeg",
-        "./images/WhatsApp Image 2026-07-13 at 4.44.17 PM (1).jpeg"
+        "./images/WhatsApp Image 2026-07-13 at 4.44.17 PM (1).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.44.19 PM.jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.44.19 PM (1).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.44.20 PM.jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.49.59 PM.jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.49.59 PM (1).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.50.00 PM.jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.50.00 PM (1).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.50.01 PM.jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.50.01 PM (1).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.50.01 PM (2).jpeg",
+        "./images/WhatsApp Image 2026-07-13 at 4.52.16 PM.jpeg"
     ];
 
-    let current = 0;
-
     const slide = document.getElementById("slideshow");
+    let current = 0;
 
     slide.src = images[0];
 
     setInterval(function () {
-        current++;
-        if (current >= images.length) {
-            current = 0;
-        }
+        current = (current + 1) % images.length;
         slide.src = images[current];
     }, 3000);
 }
